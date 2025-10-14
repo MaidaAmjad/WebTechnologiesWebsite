@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lecture 7 – CSS Selectors</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9fafc;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #007bff, #00c6ff);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      width: 85%;
+      margin: 30px auto;
+      line-height: 1.8;
+    }
+
+    h2 {
+      color: #007bff;
+      margin-top: 40px;
+    }
+
+    .example-box {
+      background: #ffffff;
+      border-left: 5px solid #007bff;
+      padding: 15px 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    code {
+      background: #f0f0f0;
+      padding: 3px 8px;
+      border-radius: 5px;
+      color: #c7254e;
+      font-weight: 600;
+    }
+
+    .highlight {
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lecture 7: CSS Selectors</h1>
+    <p>Understanding how to target elements effectively using CSS</p>
+  </header>
+
+  <main>
+    <h2>1. What Are Selectors?</h2>
+    <p>
+      CSS <span class="highlight">selectors</span> define which HTML elements you want to style. They allow you to apply styles precisely, without affecting unrelated parts of your page.
+    </p>
+
+    <h2>2. Basic Selectors</h2>
+    <div class="example-box">
+      <p><code>element</code> — targets HTML tags, e.g. <code>p</code> or <code>h1</code></p>
+      <p><code>.class</code> — targets elements with a specific class</p>
+      <p><code>#id</code> — targets a unique element with a specific ID</p>
+      <p><strong>Example:</strong></p>
+      <code>
+        p { color: blue; } <br>
+        .intro { font-size: 18px; } <br>
+        #mainTitle { text-align: center; }
+      </code>
+    </div>
+
+    <h2>3. Combinator Selectors</h2>
+    <div class="example-box">
+      <p>Used to define relationships between elements:</p>
+      <p><code>div p</code> — all &lt;p&gt; inside a &lt;div&gt;</p>
+      <p><code>div > p</code> — direct child &lt;p&gt; of &lt;div&gt;</p>
+      <p><code>div + p</code> — the &lt;p&gt; immediately after a &lt;div&gt;</p>
+      <p><code>div ~ p</code> — all &lt;p&gt; siblings of &lt;div&gt;</p>
+    </div>
+
+    <h2>4. Pseudo-classes</h2>
+    <div class="example-box">
+      <p>These target elements based on state or position.</p>
+      <p><code>a:hover</code> — when a link is hovered</p>
+      <p><code>input:focus</code> — when input field is active</p>
+      <p><code>li:first-child</code> — first item in a list</p>
+      <p><code>li:last-child</code> — last item in a list</p>
+    </div>
+
+    <h2>5. Pseudo-elements</h2>
+    <div class="example-box">
+      <p>These let you style specific parts of an element:</p>
+      <p><code>p::first-line</code> — first line of a paragraph</p>
+      <p><code>p::first-letter</code> — first letter of a paragraph</p>
+      <p><code>div::before</code> and <code>div::after</code> — add content before or after elements</p>
+    </div>
+
+    <h2>6. Attribute Selectors</h2>
+    <div class="example-box">
+      <p>Target elements based on their attributes or attribute values:</p>
+      <p><code>input[type="text"]</code> — targets text input fields</p>
+      <p><code>a[target="_blank"]</code> — targets links opening in new tab</p>
+      <p><code>[title]</code> — targets any element that has a title attribute</p>
+    </div>
+
+    <h2>Conclusion</h2>
+    <p>
+      CSS selectors are the foundation of styling — they decide what gets styled.  
+      A good understanding of them allows for clean, flexible, and efficient designs.
+    </p>
+  </main>
+
+  <footer>
+    <p>Lecture 7 – CSS Selectors | Web Technologies Course</p>
+  </footer>
+
+</body>
+</html>

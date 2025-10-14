@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture 2 - Introduction to HTML</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+    }
+
+    .main-container {
+      display: flex;
+      width: 90%;
+      max-width: 1200px;
+      background: #fff;
+      margin: 40px 0;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 25%;
+      background: #6a11cb;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 15px;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 5px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Content Area */
+    .content {
+      width: 75%;
+      padding: 30px 40px;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    .content h2 {
+      text-align: center;
+      color: #6a11cb;
+      margin-bottom: 20px;
+    }
+
+    .content h3 {
+      color: #2575fc;
+      margin-top: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #6a11cb;
+      color: white;
+    }
+
+    .highlight {
+      background: #f2f2ff;
+      border-left: 4px solid #6a11cb;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .image-section {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .image-section img {
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #2575fc;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+
+
+
+    <!-- Main Content -->
+    <div class="content">
+      <h2>Lecture 2: Introduction to HTML</h2>
+
+      <section id="overview">
+        <h3>Brief Overview of HTML</h3>
+        <p>
+          HTML (HyperText Markup Language) is the standard language for creating and structuring web pages. 
+          It defines the layout and content of a web page using a set of elements represented by tags.
+          Every web page you visit — from social media to online stores — uses HTML as its foundation.
+        </p>
+      </section>
+
+      <section id="history">
+        <h3>History of HTML</h3>
+        <p>
+          HTML was invented by <strong>Tim Berners-Lee</strong> in 1991 while working at CERN.
+          Since then, it has evolved through many versions — from HTML 2.0 to the modern HTML5.
+        </p>
+        <table>
+          <tr>
+            <th>Version</th>
+            <th>Year</th>
+            <th>Key Features</th>
+          </tr>
+          <tr>
+            <td>HTML 2.0</td>
+            <td>1995</td>
+            <td>Basic text, forms, and links</td>
+          </tr>
+          <tr>
+            <td>HTML 4.0</td>
+            <td>1997</td>
+            <td>Tables, frames, and scripting support</td>
+          </tr>
+          <tr>
+            <td>HTML5</td>
+            <td>2014</td>
+            <td>Audio, video, semantic elements, and canvas</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="difference">
+        <h3>Difference between HTML & XHTML</h3>
+        <p>
+          XHTML (Extensible HyperText Markup Language) is a stricter and more XML-based version of HTML.
+          It enforces proper nesting and closing of tags, ensuring cleaner and more consistent code.
+        </p>
+        <div class="highlight">
+          <strong>Example:</strong><br>
+          ✅ XHTML requires lowercase tags and attributes.<br>
+          ❌ HTML allows uppercase or mixed case tags.
+        </div>
+      </section>
+
+      <section id="elements">
+        <h3>Elements and Tags</h3>
+        <p>
+          HTML is made up of <strong>elements</strong>, each defined by <strong>tags</strong>.
+          Elements tell the browser how to display content.
+        </p>
+        <table>
+          <tr>
+            <th>Tag</th>
+            <th>Purpose</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td>&lt;h1&gt;...&lt;/h1&gt;</td>
+            <td>Main heading</td>
+            <td><code>&lt;h1&gt;Welcome&lt;/h1&gt;</code></td>
+          </tr>
+          <tr>
+            <td>&lt;p&gt;...&lt;/p&gt;</td>
+            <td>Paragraph</td>
+            <td><code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code></td>
+          </tr>
+          <tr>
+            <td>&lt;a&gt;...&lt;/a&gt;</td>
+            <td>Hyperlink</td>
+            <td><code>&lt;a href="index.html"&gt;Home&lt;/a&gt;</code></td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="blockinline">
+        <h3>Block Level vs. Inline Elements</h3>
+        <p>
+          In HTML, elements are divided into <strong>block-level</strong> and <strong>inline</strong> categories:
+        </p>
+        <table>
+          <tr>
+            <th>Block-Level Elements</th>
+            <th>Inline Elements</th>
+          </tr>
+          <tr>
+            <td>&lt;div&gt;, &lt;h1&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;table&gt;</td>
+            <td>&lt;span&gt;, &lt;a&gt;, &lt;img&gt;, &lt;strong&gt;, &lt;em&gt;</td>
+          </tr>
+        </table>
+
+        <div class="highlight">
+          Block-level elements start on a new line and take full width.<br>
+          Inline elements stay in line with text and take only the required width.
+        </div>
+
+      </section>
+
+      <section id="validator">
+        <h3>Introduction to HTML Validator</h3>
+        <p>
+          An HTML Validator checks your webpage for syntax errors and ensures it follows web standards.
+          The most commonly used validator is provided by the <a href="https://validator.w3.org/" target="_blank">W3C (World Wide Web Consortium)</a>.
+        </p>
+        <div class="highlight">
+          ✅ Using a validator helps ensure cross-browser compatibility and accessibility.
+        </div>
+      </section>
+
+      <section id="conclusion">
+        <h3>Conclusion</h3>
+        <p>
+          HTML forms the foundation of every website. Understanding its structure, syntax, and validation ensures
+          cleaner, more professional, and accessible web pages — a crucial step before diving into CSS and JavaScript.
+        </p>
+      </section>
+
+      <a href="website.html" class="back-link">⬅ Back to Home</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

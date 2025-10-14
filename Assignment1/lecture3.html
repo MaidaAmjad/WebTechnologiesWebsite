@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture 3 - Table, Div, Span & Layout Design</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      background-color: #f7f8ff;
+      scroll-behavior: smooth;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: linear-gradient(180deg, #6a11cb, #2575fc);
+      color: white;
+      height: 100vh;
+      padding: 25px;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 22px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    /* Main Content */
+    .content {
+      margin-left: 270px;
+      padding: 40px;
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    h2 {
+      color: #6a11cb;
+      margin-top: 40px;
+    }
+
+    table {
+      width: 90%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #6a11cb;
+      color: white;
+    }
+
+    .example-box {
+      background: #eef2ff;
+      border-left: 4px solid #6a11cb;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 10px 0;
+      font-family: monospace;
+    }
+
+    .layout-example {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .layout-example div {
+      padding: 20px;
+      border-radius: 6px;
+      color: white;
+      text-align: center;
+    }
+
+    .header { background: #6a11cb; grid-area: header; }
+    .sidebar-layout { background: #2575fc; grid-area: sidebar; }
+    .main { background: #8a2be2; grid-area: main; }
+    .footer { background: #5f2eea; grid-area: footer; }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #2575fc;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Lecture 3</h2>
+    <a href="#table">Table</a>
+    <a href="#div">Div</a>
+    <a href="#span">Span</a>
+    <a href="#layout">Layout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Table, Div, Span & Layout Design in HTML</h1>
+    <p>This lecture explores how HTML structures web content using elements like <strong>table</strong>, <strong>div</strong>, <strong>span</strong>, and <strong>layout</strong> containers to organize and style web pages effectively.</p>
+
+    <!-- Table Section -->
+    <section id="table">
+      <h2>1. HTML Tables</h2>
+      <p>Tables arrange data in rows and columns, making information more organized and easy to compare.</p>
+
+      <table>
+        <tr>
+          <th>Attribute</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+        <tr>
+          <td><strong>border</strong></td>
+          <td>Defines the border thickness around the table.</td>
+          <td><code>&lt;table border="2"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><strong>cellpadding</strong></td>
+          <td>Controls space between cell content and border.</td>
+          <td><code>&lt;table cellpadding="10"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><strong>cellspacing</strong></td>
+          <td>Sets space between cells in the table.</td>
+          <td><code>&lt;table cellspacing="5"&gt;</code></td>
+        </tr>
+      </table>
+
+      <div class="example-box">
+        &lt;table border="1" cellpadding="5" cellspacing="5"&gt;<br>
+        &nbsp;&nbsp;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;<br>
+        &nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Ali&lt;/td&gt;&lt;td&gt;21&lt;/td&gt;&lt;/tr&gt;<br>
+        &lt;/table&gt;
+      </div>
+      <p><strong>Tip:</strong> Tables should only be used for data, not for full-page layouts.</p>
+    </section>
+
+    <!-- Div Section -->
+    <section id="div">
+      <h2>2. The &lt;div&gt; Element</h2>
+      <p>
+        The <strong>&lt;div&gt;</strong> tag represents a block-level container. It’s mainly used for grouping elements, structuring layouts, or applying CSS styling.
+      </p>
+      <div class="example-box">
+        &lt;div style="background-color: lightblue; padding: 10px;"&gt;<br>
+        &nbsp;&nbsp;This is a block container using DIV.<br>
+        &lt;/div&gt;
+      </div>
+    </section>
+
+    <!-- Span Section -->
+    <section id="span">
+      <h2>3. The &lt;span&gt; Element</h2>
+      <p>
+        The <strong>&lt;span&gt;</strong> tag is an inline container that doesn’t start a new line. It’s ideal for styling or targeting small portions of text.
+      </p>
+      <div class="example-box">
+        &lt;p&gt;This is a &lt;span style="color:red;"&gt;highlighted&lt;/span&gt; word.&lt;/p&gt;
+      </div>
+      <p><strong>Note:</strong> Use <code>div</code> for structure and <code>span</code> for styling inline content.</p>
+    </section>
+
+    <!-- Layout Section -->
+    <section id="layout">
+      <h2>4. HTML Layout Design</h2>
+      <p>
+        Layout design organizes the main areas of a webpage — such as header, sidebar, main content, and footer — for better readability and design balance.
+      </p>
+      <div class="layout-example">
+        <div class="header">Header</div>
+        <div class="sidebar-layout">Sidebar</div>
+        <div class="main">Main Content</div>
+        <div class="footer">Footer</div>
+      </div>
+      <p>You can also create layouts using <strong>Flexbox</strong> or <strong>CSS Grid</strong> for responsiveness.</p>
+    </section>
+
+    <a href="website.html" class="back-link">⬅ Back to Home</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture 6 - Common CSS Properties</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f7fafc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, #805ad5, #9f7aea);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.3em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #6b46c1;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 1.05em;
+    }
+
+    .property-demo {
+      background: #f0f4f8;
+      border-left: 5px solid #805ad5;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .property-demo pre {
+      flex: 1;
+      background: #edf2f7;
+      padding: 10px 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-right: 15px;
+    }
+
+    .box {
+      flex: 0 0 150px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-radius: 6px;
+      color: white;
+    }
+
+    figure {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    figcaption {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+    }
+
+    footer {
+      background: #6b46c1;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* Demo colors for boxes */
+    .bg-demo { background-color: #4299e1; }
+    .font-demo { background-color: #48bb78; font-family: 'Courier New', monospace; }
+    .border-demo { background-color: #ed8936; border: 4px dashed #2d3748; color: #2d3748; }
+    .margin-demo { background-color: #e53e3e; margin-left: 30px; }
+    .padding-demo { background-color: #2b6cb0; padding: 20px; }
+    .radius-demo { background-color: #9f7aea; border-radius: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lecture 6: Common CSS Properties</h1>
+    <p>Exploring the essential styling properties used in CSS</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        CSS (Cascading Style Sheets) controls the look and layout of web pages.
+        It allows you to style HTML elements by changing their colors, fonts, spacing, and positioning.
+        Below are some of the most common CSS properties used by web developers.
+      </p>
+    </section>
+
+    <section>
+      <h2>1. Background Color</h2>
+      <p>
+        The <code>background-color</code> property sets the background color of an element.
+      </p>
+      <div class="property-demo">
+        <pre>
+.box {
+  background-color: #4299e1;
+}</pre>
+        <div class="box bg-demo">Blue Box</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Font Properties</h2>
+      <p>
+        The <code>font-family</code>, <code>font-size</code>, and <code>color</code> properties control the text appearance.
+      </p>
+      <div class="property-demo">
+        <pre>
+.box {
+  font-family: "Courier New";
+  font-size: 18px;
+  color: white;
+}</pre>
+        <div class="box font-demo">Monospace</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Border</h2>
+      <p>
+        The <code>border</code> property adds borders around elements.  
+        You can customize its width, style, and color.
+      </p>
+      <div class="property-demo">
+        <pre>
+.box {
+  border: 4px dashed #2d3748;
+}</pre>
+        <div class="box border-demo">Dashed</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Margin</h2>
+      <p>
+        The <code>margin</code> property controls the space outside an element’s border.
+      </p>
+      <div class="property-demo">
+        <pre>
+.box {
+  margin-left: 30px;
+}</pre>
+        <div class="box margin-demo">Margin</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Padding</h2>
+      <p>
+        The <code>padding</code> property adds space inside an element’s border.
+      </p>
+      <div class="property-demo">
+        <pre>
+.box {
+  padding: 20px;
+}</pre>
+        <div class="box padding-demo">Padding</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. Border Radius</h2>
+      <p>
+        The <code>border-radius</code> property rounds the corners of an element’s border.
+      </p>
+      <div class="property-demo">
+        <pre>
+.box {
+  border-radius: 20px;
+}</pre>
+        <div class="box radius-demo">Rounded</div>
+      </div>
+    </section>
+
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>
+        CSS gives complete control over how a webpage looks and feels.
+        By understanding properties like <code>background</code>, <code>font</code>, <code>border</code>,
+        <code>margin</code>, and <code>padding</code>, you can design attractive and well-structured layouts.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Lecture 6 | Common CSS Properties | Designed by Maida Amjad
+  </footer>
+</body>
+</html>

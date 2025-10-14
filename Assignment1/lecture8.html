@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lecture 8 – Block, Inline, Inline-Block</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafc;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #007bff, #00c6ff);
+      color: white;
+      text-align: center;
+      padding: 25px 10px;
+    }
+
+    main {
+      width: 85%;
+      margin: 30px auto;
+      line-height: 1.8;
+    }
+
+    h2 {
+      color: #007bff;
+      margin-top: 40px;
+    }
+
+    .example-box {
+      background: #fff;
+      border-left: 5px solid #007bff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      margin: 15px 0;
+    }
+
+    code {
+      background: #f0f0f0;
+      padding: 3px 8px;
+      border-radius: 5px;
+      color: #c7254e;
+      font-weight: 600;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f4f8ff;
+    }
+
+    .demo-section {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+    }
+
+    .block-demo div,
+    .inline-demo span,
+    .inline-block-demo div {
+      background: #00c6ff;
+      color: white;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+
+    .block-demo div {
+      display: block;
+    }
+
+    .inline-demo span {
+      display: inline;
+    }
+
+    .inline-block-demo div {
+      display: inline-block;
+      width: 100px;
+      text-align: center;
+    }
+
+    footer {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lecture 8: Block, Inline, and Inline-Block Elements</h1>
+    <p>Understanding how elements behave in the page layout</p>
+  </header>
+
+  <main>
+    <h2>1. Introduction</h2>
+    <p>
+      In HTML, every element has a default display behavior that defines how it appears and interacts with other elements.  
+      The three most common display types are <code>block</code>, <code>inline</code>, and <code>inline-block</code>.
+    </p>
+
+    <h2>2. Block Elements</h2>
+    <div class="example-box">
+      <p>
+        Block-level elements start on a new line and take up the full width available.
+        Common examples include <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>, and <code>&lt;section&gt;</code>.
+      </p>
+      <p><strong>Example:</strong></p>
+      <code>&lt;div&gt;This is a block element&lt;/div&gt;</code>
+    </div>
+
+    <h2>3. Inline Elements</h2>
+    <div class="example-box">
+      <p>
+        Inline elements do not start on a new line and only take up as much width as necessary.  
+        Common examples include <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;em&gt;</code>, and <code>&lt;strong&gt;</code>.
+      </p>
+      <p><strong>Example:</strong></p>
+      <code>&lt;span&gt;This is inline&lt;/span&gt;</code>
+    </div>
+
+    <h2>4. Inline-Block Elements</h2>
+    <div class="example-box">
+      <p>
+        Inline-block elements are like inline elements but allow you to set width and height.  
+        They appear next to each other while behaving like blocks.
+      </p>
+      <p><strong>Example:</strong></p>
+      <code>&lt;div style="display:inline-block"&gt;Inline-Block Box&lt;/div&gt;</code>
+    </div>
+
+    <h2>5. Comparison Table</h2>
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>Block</th>
+        <th>Inline</th>
+        <th>Inline-Block</th>
+      </tr>
+      <tr>
+        <td>Starts on new line?</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td>Can set width/height?</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Default width</td>
+        <td>100%</td>
+        <td>As content</td>
+        <td>As content (can be changed)</td>
+      </tr>
+      <tr>
+        <td>Common examples</td>
+        <td>div, p, section</td>
+        <td>span, a, strong</td>
+        <td>img, button</td>
+      </tr>
+    </table>
+
+    <h2>6. Visual Demonstration</h2>
+    <div class="demo-section">
+      <h3>Block Example</h3>
+      <div class="block-demo">
+        <div>Block 1</div>
+        <div>Block 2</div>
+        <div>Block 3</div>
+      </div>
+
+      <h3>Inline Example</h3>
+      <div class="inline-demo">
+        <span>Inline 1</span>
+        <span>Inline 2</span>
+        <span>Inline 3</span>
+      </div>
+
+      <h3>Inline-Block Example</h3>
+      <div class="inline-block-demo">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+      </div>
+    </div>
+
+    <h2>7. Conclusion</h2>
+    <p>
+      Understanding display types is essential for layout design.  
+      <code>block</code> elements structure your page,  
+      <code>inline</code> elements style text and links,  
+      and <code>inline-block</code> elements give flexibility for grid-like layouts.
+    </p>
+  </main>
+
+  <footer>
+    <p>Lecture 8 – Block, Inline, Inline-Block | Web Technologies Course</p>
+  </footer>
+
+</body>
+</html>
